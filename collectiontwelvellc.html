@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection Twelve LLC | Woman-Owned Boutique, Southaven MS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Reenie+Beanie&family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --charcoal:#161414;
+    --hot:#ff1361;
+    --hot-deep:#c40050;
+    --cream:#fff4ea;
+    --gold:#ffc94d;
+    --line:rgba(255,255,255,0.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--cream);
+    font-family:'Work Sans',sans-serif;
+    font-weight:400;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--hot);color:var(--black);}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;line-height:0.95;}
+  .script{font-family:'Reenie Beanie',cursive;color:var(--hot);}
+
+  /* ---------- TOP RIBBON ---------- */
+  .ribbon{
+    background:var(--hot);color:var(--black);
+    overflow:hidden;white-space:nowrap;
+  }
+  .ribbon .track{
+    display:inline-block;padding-left:100%;
+    animation:scroll 24s linear infinite;
+    font-family:'Archivo Black',sans-serif;font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+    padding:9px 0;
+  }
+  .ribbon .track span{margin:0 1.6em;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-100%);}}
+
+  /* ---------- NAV ---------- */
+  header{position:sticky;top:0;z-index:60;background:rgba(10,10,10,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav{max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:20px 36px;}
+  .brand{font-family:'Archivo Black',sans-serif;font-size:24px;color:var(--cream);display:flex;align-items:baseline;gap:6px;}
+  .brand .twelve{color:var(--hot);}
+  .brand small{font-family:'Work Sans',sans-serif;font-weight:600;font-size:9px;letter-spacing:.25em;color:var(--gold);align-self:center;}
+  .nav-links{display:flex;gap:38px;}
+  .nav-links a{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;position:relative;padding-bottom:4px;}
+  .nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--hot);transition:width .3s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .cta-pill{background:var(--hot);color:var(--black);padding:11px 24px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;transition:all .25s ease;border:2px solid var(--hot);}
+  .cta-pill:hover{background:transparent;color:var(--hot);}
+  @media(max-width:920px){.nav-links{display:none;} nav{padding:16px 20px;}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;padding:60px 36px;max-width:1440px;margin:0 auto;}
+  .hero-bg{position:absolute;inset:0;z-index:0;}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.42;}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg, rgba(10,10,10,0.98) 20%, rgba(10,10,10,0.55) 60%, rgba(10,10,10,0.85) 100%);}
+  .hero-inner{position:relative;z-index:2;max-width:760px;}
+  .badge-owned{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1.5px solid var(--hot);border-radius:999px;padding:8px 18px 8px 10px;
+    font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:28px;
+  }
+  .badge-owned .dot{width:8px;height:8px;border-radius:50%;background:var(--hot);}
+  .hero-inner h1{font-size:clamp(46px,7.4vw,104px);}
+  .hero-inner h1 .script{font-family:'Reenie Beanie',cursive;text-transform:none;font-size:1.15em;display:block;line-height:0.75;margin:6px 0;}
+  .hero-sub{margin-top:26px;font-size:17px;line-height:1.7;color:rgba(255,244,234,0.72);max-width:480px;}
+  .hero-actions{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap;}
+  .btn-hot{background:var(--hot);color:var(--black);padding:16px 32px;font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(--hot);transition:all .25s ease;}
+  .btn-hot:hover{background:transparent;color:var(--hot);}
+  .btn-ghost{border:2px solid var(--cream);color:var(--cream);padding:16px 32px;font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;transition:all .25s ease;}
+  .btn-ghost:hover{background:var(--cream);color:var(--black);}
+
+  /* ---------- MARQUEE WORD BAND ---------- */
+  .wordband{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:0;}
+  .wordband .track{display:inline-block;padding-left:0;animation:scroll 30s linear infinite;padding:26px 0;}
+  .wordband span{
+    font-family:'Archivo Black',sans-serif;font-size:clamp(28px,4.4vw,54px);
+    color:transparent;-webkit-text-stroke:1.5px var(--cream);
+    margin:0 36px;text-transform:uppercase;
+  }
+  .wordband span.filled{color:var(--hot);-webkit-text-stroke:0;}
+
+  /* ---------- SECTION ---------- */
+  section{padding:110px 36px;max-width:1440px;margin:0 auto;}
+  .sec-head{margin-bottom:56px;max-width:640px;}
+  .sec-head .kicker{color:var(--hot);font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;}
+  .sec-head h2{font-size:clamp(32px,4.6vw,60px);}
+  .sec-head p{margin-top:18px;color:rgba(255,244,234,0.62);font-size:15px;line-height:1.75;}
+
+  /* ---------- FOUNDER / REAL TALK ---------- */
+  .realtalk{
+    background:var(--cream);color:var(--black);
+    border-radius:0;padding:0;
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:0;
+    max-width:1440px;margin:0 auto;
+  }
+  .rt-img{position:relative;aspect-ratio:4/5;overflow:hidden;}
+  .rt-img img{width:100%;height:100%;object-fit:cover;}
+  .rt-text{padding:80px;display:flex;flex-direction:center;flex-direction:column;justify-content:center;}
+  .rt-mark{font-family:'Archivo Black',sans-serif;font-size:100px;line-height:0.6;color:var(--hot);margin-bottom:10px;}
+  .rt-text p.quote{font-family:'Archivo Black',sans-serif;font-size:clamp(24px,2.6vw,34px);line-height:1.25;text-transform:none;margin-bottom:26px;}
+  .rt-text .sig{font-family:'Reenie Beanie',cursive;font-size:34px;color:var(--hot-deep);}
+  .rt-text .role{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#555;margin-top:4px;}
+  @media(max-width:900px){.realtalk{grid-template-columns:1fr;} .rt-text{padding:50px 26px;}}
+
+  /* ---------- MOOD GRID ---------- */
+  .mood-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .mood-card{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:4px;}
+  .mood-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1);filter:saturate(1.05) brightness(0.88);}
+  .mood-card:hover img{transform:scale(1.07);}
+  .mood-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%, rgba(10,10,10,0.92) 100%);z-index:1;}
+  .mood-tag{position:absolute;top:16px;left:16px;z-index:2;background:var(--hot);color:var(--black);font-family:'Archivo Black',sans-serif;font-size:10.5px;padding:6px 12px;text-transform:uppercase;}
+  .mood-caption{position:absolute;left:20px;right:20px;bottom:20px;z-index:2;}
+  .mood-caption h3{font-size:19px;margin-bottom:6px;}
+  .mood-caption span{font-family:'Reenie Beanie',cursive;color:var(--gold);font-size:20px;}
+  @media(max-width:900px){.mood-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.mood-grid{grid-template-columns:1fr;}}
+
+  /* ---------- PRODUCT SHELF ---------- */
+  .shelf-wrap{position:relative;}
+  .shelf{display:flex;gap:22px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x mandatory;scrollbar-width:none;}
+  .shelf::-webkit-scrollbar{display:none;}
+  .card{flex:0 0 260px;scroll-snap-align:start;}
+  .card-img{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--charcoal);border:1px solid var(--line);}
+  .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .card:hover .card-img img{transform:scale(1.06);}
+  .flag{position:absolute;top:12px;left:12px;z-index:2;background:var(--hot);color:var(--black);font-family:'Archivo Black',sans-serif;font-size:10px;padding:5px 10px;}
+  .card-info{padding-top:14px;}
+  .card-info h4{font-size:13.5px;font-weight:600;margin-bottom:5px;text-transform:none;}
+  .card-price{font-size:13.5px;font-weight:700;color:var(--gold);}
+  .card-price del{color:rgba(255,244,234,0.4);font-weight:400;margin-right:8px;}
+
+  /* ---------- STAT STRIP ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stat{padding:44px 24px;text-align:center;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat .n{font-family:'Archivo Black',sans-serif;font-size:36px;color:var(--hot);}
+  .stat .l{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,244,234,0.55);margin-top:8px;}
+  @media(max-width:800px){.stats{grid-template-columns:repeat(2,1fr);}}
+
+  /* ---------- QUOTE WALL ---------- */
+  .quote-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .qcard{background:var(--charcoal);border:1px solid var(--line);padding:32px;position:relative;}
+  .qcard .kiss{position:absolute;top:18px;right:20px;font-size:26px;color:var(--hot);opacity:.5;}
+  .qcard p{font-size:15px;line-height:1.7;color:rgba(255,244,234,0.85);margin-bottom:20px;}
+  .qcard .who{font-family:'Reenie Beanie',cursive;color:var(--gold);font-size:22px;}
+  @media(max-width:900px){.quote-wall{grid-template-columns:1fr;}}
+
+  /* ---------- INSTAGRAM ---------- */
+  .ig-head{display:flex;align-items:center;gap:18px;margin-bottom:44px;flex-wrap:wrap;}
+  .ig-head img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid var(--hot);}
+  .ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;}
+  .ig-grid a{position:relative;aspect-ratio:1/1;overflow:hidden;display:block;}
+  .ig-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;filter:brightness(0.82);}
+  .ig-grid a:hover img{transform:scale(1.08);filter:brightness(1);}
+  @media(max-width:800px){.ig-grid{grid-template-columns:repeat(3,1fr);}}
+
+  /* ---------- VISIT ---------- */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .visit-row{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line);}
+  .visit-row:last-of-type{border-bottom:1px solid var(--line);}
+  .visit-row .lbl{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--hot);width:100px;flex-shrink:0;}
+  .visit-row .val{font-size:14.5px;line-height:1.6;color:rgba(255,244,234,0.85);}
+  .visit-frame{aspect-ratio:1/1;border:2px solid var(--hot);overflow:hidden;}
+  .visit-frame iframe{width:100%;height:100%;border:0;filter:invert(0.92) grayscale(0.5) contrast(0.9);}
+  @media(max-width:900px){.visit{grid-template-columns:1fr;}}
+
+  /* ---------- CTA / NEWSLETTER ---------- */
+  .cta-block{background:var(--hot);color:var(--black);padding:100px 36px;text-align:center;}
+  .cta-block .kicker{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-bottom:16px;}
+  .cta-block h2{font-size:clamp(30px,5.4vw,64px);max-width:820px;margin:0 auto 30px;}
+  .cta-block h2 .script{color:var(--black);font-family:'Reenie Beanie',cursive;text-transform:none;}
+  .vip-form{display:flex;max-width:440px;margin:0 auto;border-bottom:2px solid var(--black);}
+  .vip-form input{flex:1;background:transparent;border:0;padding:14px 6px;font-family:'Work Sans',sans-serif;font-size:15px;color:var(--black);outline:none;}
+  .vip-form input::placeholder{color:rgba(10,10,10,0.5);}
+  .vip-form button{background:none;border:0;font-family:'Archivo Black',sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:14px 8px;cursor:pointer;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:80px 36px 30px;max-width:1440px;margin:0 auto;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px;border-bottom:1px solid var(--line);}
+  .footer-brand .brand{margin-bottom:16px;}
+  .footer-brand p{color:rgba(255,244,234,0.55);font-size:13px;line-height:1.8;max-width:280px;}
+  footer h5{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--hot);margin-bottom:18px;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:12px;font-size:13.5px;color:rgba(255,244,234,0.72);}
+  footer li a:hover{color:var(--hot);}
+  .footer-bottom{display:flex;justify-content:space-between;padding-top:24px;font-size:11px;color:rgba(255,244,234,0.4);flex-wrap:wrap;gap:10px;}
+  @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+
+  @media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}}
+  @media(max-width:640px){section{padding:70px 20px;}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  <div class="track">
+    <span>WOMAN OWNED · SOUTHAVEN, MS</span><span>✦</span>
+    <span>SHE BUILT THIS FROM SCRATCH</span><span>✦</span>
+    <span>NEW DROPS EVERY WEEK</span><span>✦</span>
+    <span>WOMAN OWNED · SOUTHAVEN, MS</span><span>✦</span>
+    <span>SHE BUILT THIS FROM SCRATCH</span><span>✦</span>
+    <span>NEW DROPS EVERY WEEK</span><span>✦</span>
+  </div>
+</div>
+
+<header>
+  <nav>
+    <div class="brand">Collection<span class="twelve">Twelve</span> <small>LLC</small></div>
+    <div class="nav-links">
+      <a href="#wardrobe">Shop</a>
+      <a href="#realtalk">Our Story</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a href="https://collectiontwelvellc.com" target="_blank" class="cta-pill">Shop Now</a>
+  </nav>
+</header>
+
+<section class="hero" style="padding-top:60px;padding-bottom:0;">
+  <div class="hero-bg"><img src="https://collectiontwelvellc.com/cdn/shop/files/Photoroom_20260702_044151.png?v=1782985336&width=1600" alt="Collection Twelve"></div>
+  <div class="hero-inner">
+    <div class="badge-owned"><span class="dot"></span>Woman-Owned · Southaven, Mississippi</div>
+    <h1>Confidence<br>looks good<br><span class="script">on her.</span></h1>
+    <p class="hero-sub">Built by a boss, styled for the girls who walk in and own the room. Cutout sets, statement denim, and going-out pieces — no boring basics allowed.</p>
+    <div class="hero-actions">
+      <a href="#wardrobe" class="btn-hot">Shop The Wardrobe</a>
+      <a href="#realtalk" class="btn-ghost">Meet The Owner</a>
+    </div>
+  </div>
+</section>
+
+<div class="wordband">
+  <div class="track">
+    <span>SASSY</span><span class="filled">BOLD</span><span>UNBOTHERED</span><span class="filled">HER OWN BOSS</span><span>SASSY</span><span class="filled">BOLD</span><span>UNBOTHERED</span><span class="filled">HER OWN BOSS</span>
+  </div>
+</div>
+
+<div class="realtalk" id="realtalk">
+  <div class="rt-img">
+    <img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2456.png?v=1777753681&width=900" alt="Inside Collection Twelve boutique">
+  </div>
+  <div class="rt-text">
+    <div class="rt-mark">"</div>
+    <p class="quote">I didn't build this brand to fit in. I built it so she never has to.</p>
+    <div class="sig">— The C12 Team</div>
+    <div class="role">Woman-Owned · Southaven, MS</div>
+  </div>
+</div>
+
+<section id="wardrobe">
+  <div class="sec-head">
+    <p class="kicker">The Wardrobe</p>
+    <h2>Pick your mood</h2>
+    <p>Nine ways to shop the collection — every mood, every occasion, every version of you.</p>
+  </div>
+  <div class="mood-grid">
+    <a class="mood-card" href="https://collectiontwelvellc.com/collections/cutout-confidence" target="_blank">
+      <span class="mood-tag">Edit 01</span>
+      <img src="https://collectiontwelvellc.com/cdn/shop/files/C74A4538-2D12-4421-81DC-AC283C018AAD.png?v=1782986236&width=700" alt="Polished Pairs">
+      <div class="mood-caption"><h3>Polished Pairs</h3><span>put-together, on purpose</span></div>
+    </a>
+    <a class="mood-card" href="https://collectiontwelvellc.com/collections/bathing-suits" target="_blank">
+      <span class="mood-tag">Edit 02</span>
+      <img src="https://collectiontwelvellc.com/cdn/shop/files/104FB5A9-8678-401C-B745-50488006767C.png?v=1782983576&width=700" alt="Poolside Luxe">
+      <div class="mood-caption"><h3>Poolside Luxe</h3><span>hot girl summer, always</span></div>
+    </a>
+    <a class="mood-card" href="https://collectiontwelvellc.com/collections/graphic-tees" target="_blank">
+      <span class="mood-tag">Edit 03</span>
+      <img src="https://collectiontwelvellc.com/cdn/shop/collections/8C1285F2-4583-468A-9500-E16769D329BD.png?v=1777642762&width=700" alt="Statement Tops">
+      <div class="mood-caption"><h3>Statement Tops</h3><span>say it without saying it</span></div>
+    </a>
+    <a class="mood-card" href="https://collectiontwelvellc.com/collections/long-items" target="_blank">
+      <span class="mood-tag">Edit 04</span>
+      <img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2448.png?v=1777753135&width=700" alt="Form-Fitted Favorites">
+      <div class="mood-caption"><h3>Form-Fitted Favorites</h3><span>main character energy</span></div>
+    </a>
+    <a class="mood-card" href="https://collectiontwelvellc.com/collections/on-the-go-collection" target="_blank">
+      <span class="mood-tag">Edit 05</span>
+      <img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2370.png?v=1777646799&width=700" alt="Loungewear">
+      <div class="mood-caption"><h3>Loungewear</h3><span>soft life, still sassy</span></div>
+    </a>
+    <a class="mood-card" href="https://collectiontwelvellc.com/collections/glam-essentials" target="_blank">
+      <span class="mood-tag">Edit 06</span>
+      <img src="https://collectiontwelvellc.com/cdn/shop/collections/CDBE620F-AEDC-4017-84AE-DB97BC1E6FA2.png?v=1768425408&width=700" alt="Glam Essentials">
+      <div class="mood-caption"><h3>Glam Essentials</h3><span>zero effort, all glam</span></div>
+    </a>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="sec-head">
+    <p class="kicker">Fan Favorites</p>
+    <h2>What she's buying</h2>
+  </div>
+  <div class="shelf-wrap">
+    <div class="shelf">
+      <div class="card">
+        <div class="card-img"><span class="flag">Sale</span><img src="https://collectiontwelvellc.com/cdn/shop/files/104FB5A9-8678-401C-B745-50488006767C.png?v=1782983576&width=600" alt="Cross Tides Lace-Up Set"></div>
+        <div class="card-info"><h4>Cross Tides Lace-Up Set</h4><div class="card-price">$24.99</div></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2370.png?v=1777646799&width=600" alt="Hardy Royal Set"></div>
+        <div class="card-info"><h4>Hardy Royal Set</h4><div class="card-price">$42.99</div></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><span class="flag">Sale</span><img src="https://collectiontwelvellc.com/cdn/shop/collections/8C1285F2-4583-468A-9500-E16769D329BD.png?v=1777642762&width=600" alt="Freaknik Skort Set"></div>
+        <div class="card-info"><h4>Freaknik Skort Set</h4><div class="card-price"><del>$44.99</del>$19.99</div></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2331.png?v=1777637978&width=600" alt="Rebel Patch Wrap Skirt"></div>
+        <div class="card-info"><h4>Rebel Patch Wrap Skirt</h4><div class="card-price">$29.99</div></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><span class="flag">Sale</span><img src="https://collectiontwelvellc.com/cdn/shop/collections/IMG-2351.png?v=1777640820&width=600" alt="Everyday Luxe Set"></div>
+        <div class="card-info"><h4>Everyday Luxe Set</h4><div class="card-price"><del>$35.99</del>$19.99</div></div>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2448.png?v=1777753135&width=600" alt="V-Neck Shorty Romper"></div>
+        <div class="card-info"><h4>The V-Neck Shorty Romper</h4><div class="card-price">$27.99</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="n">677+</div><div class="l">IG Followers</div></div>
+  <div class="stat"><div class="n">9</div><div class="l">Curated Edits</div></div>
+  <div class="stat"><div class="n">100%</div><div class="l">Woman Owned</div></div>
+  <div class="stat"><div class="n">1</div><div class="l">Southaven Storefront</div></div>
+</div>
+
+<section id="reviews">
+  <div class="sec-head">
+    <p class="kicker">Southaven Says</p>
+    <h2>She said it best</h2>
+  </div>
+  <div class="quote-wall">
+    <div class="qcard"><span class="kiss">✦</span><p>Walked in for one top and walked out feeling like the main character. This store just gets it.</p><div class="who">— a C12 regular</div></div>
+    <div class="qcard"><span class="kiss">✦</span><p>Finally a boutique that fits real bodies and still makes you feel like a whole vibe.</p><div class="who">— a C12 regular</div></div>
+    <div class="qcard"><span class="kiss">✦</span><p>Love supporting a Southaven business run by a woman who actually has taste.</p><div class="who">— a C12 regular</div></div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="ig-head">
+    <img src="https://collectiontwelvellc.com/cdn/shop/files/Photoroom_20251028_213627_74668a29-bdd4-42a4-95ca-466ed31ca0cb.png?height=200&v=1761706287" alt="Collection Twelve LLC logo">
+    <div>
+      <p class="kicker" style="margin-bottom:4px;">@collectiontwelvellc</p>
+      <div style="font-size:13px;color:rgba(255,244,234,0.6);">677 followers · 504 following · 12 posts</div>
+    </div>
+    <a href="https://www.instagram.com/collectiontwelvellc" target="_blank" class="cta-pill" style="margin-left:auto;">Follow Along</a>
+  </div>
+  <div class="ig-grid">
+    <a href="https://www.instagram.com/collectiontwelvellc" target="_blank"><img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2456.png?v=1777753681&width=400" alt="C12 boutique"></a>
+    <a href="https://www.instagram.com/collectiontwelvellc" target="_blank"><img src="https://collectiontwelvellc.com/cdn/shop/files/C74A4538-2D12-4421-81DC-AC283C018AAD.png?v=1782986236&width=400" alt="Midnight Bloom Cutout Skirt Set"></a>
+    <a href="https://www.instagram.com/collectiontwelvellc" target="_blank"><img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2370.png?v=1777646799&width=400" alt="Hardy Royal Set"></a>
+    <a href="https://www.instagram.com/collectiontwelvellc" target="_blank"><img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2331.png?v=1777637978&width=400" alt="Rebel Patch Wrap Skirt"></a>
+    <a href="https://www.instagram.com/collectiontwelvellc" target="_blank"><img src="https://collectiontwelvellc.com/cdn/shop/files/104FB5A9-8678-401C-B745-50488006767C.png?v=1782983576&width=400" alt="Cross Tides Lace-Up Set"></a>
+    <a href="https://www.instagram.com/collectiontwelvellc" target="_blank"><img src="https://collectiontwelvellc.com/cdn/shop/files/IMG-2448.png?v=1777753135&width=400" alt="V-Neck Shorty Romper"></a>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="visit">
+    <div>
+      <p class="kicker">Come Say Hey</p>
+      <h2 style="font-size:clamp(30px,4vw,50px);margin-bottom:26px;">Southaven's home for boss-lady fashion.</h2>
+      <div class="visit-row"><div class="lbl">Address</div><div class="val">1770 Stateline Rd<br>Southaven, MS 38671</div></div>
+      <div class="visit-row"><div class="lbl">Online</div><div class="val">collectiontwelvellc.com</div></div>
+      <div class="visit-row"><div class="lbl">Follow</div><div class="val">@collectiontwelvellc on Instagram</div></div>
+      <div style="margin-top:30px;">
+        <a href="https://www.google.com/maps/search/?api=1&query=1770+Stateline+Rd+Southaven+MS+38671" target="_blank" class="btn-hot">Get Directions</a>
+      </div>
+    </div>
+    <div class="visit-frame">
+      <iframe loading="lazy" src="https://www.google.com/maps?q=1770+Stateline+Rd,+Southaven,+MS+38671&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<div class="cta-block">
+  <p class="kicker">Join The Insider List</p>
+  <h2>Be first to know when the <span class="script">new drop</span> hits.</h2>
+  <form class="vip-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You\'re In ✓';">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Sign Me Up →</button>
+  </form>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand">Collection<span class="twelve">Twelve</span> <small>LLC</small></div>
+      <p>A woman-owned Southaven, Mississippi boutique for the confident, the curated, and the ready-to-be-seen.</p>
+    </div>
+    <div>
+      <h5>Shop</h5>
+      <ul>
+        <li><a href="#wardrobe">The Wardrobe</a></li>
+        <li><a href="https://collectiontwelvellc.com/collections/all" target="_blank">Full Collection</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Boutique</h5>
+      <ul>
+        <li>1770 Stateline Rd</li>
+        <li>Southaven, MS 38671</li>
+        <li><a href="#visit">Get Directions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="https://www.instagram.com/collectiontwelvellc" target="_blank">Instagram</a></li>
+        <li><a href="https://collectiontwelvellc.com" target="_blank">collectiontwelvellc.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Collection Twelve LLC · Woman-Owned & Proud</span>
+    <span>Southaven, Mississippi</span>
+  </div>
+</footer>
+
+</body>
+</html>
